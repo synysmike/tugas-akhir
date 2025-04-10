@@ -52,3 +52,75 @@ These instructions will help you set up the project on your local machine for de
    ```bash
    git clone https://github.com/synysmike/tugas-akhir.git
    cd tugas-akhir
+   ```
+   
+2. **Install Dependencies**
+
+Meteor will automatically install the required packages when you run the app. If needed, you can install npm dependencies by running: 
+```bash
+    meteor npm install
+```
+
+
+3. Run the Application
+
+To start the Meteor server, run:
+```bash
+    meteor
+```
+Your application should now be accessible at http://localhost:3000.
+
+Project Structure
+
+**Project Structure**
+Below is an overview of the typical project structure:
+```
+tugas-akhir/
+├── client/          # Client-specific code (HTML, CSS, JavaScript)
+├── server/          # Server-side code (Meteor methods, publications, etc.)
+├── imports/         # Shared modules (used by both client and server)
+├── public/          # Static assets (images, fonts, etc.)
+├── package.json     # Project metadata and dependencies
+└── README.md        # Project documentation
+```
+
+sage
+Once the application is running:
+
+Register/Login: Create an account or log in.
+
+Forum Participation: Create new discussion threads or join existing conversations.
+
+Real-Time Interaction: Enjoy the benefits of real-time updates as you interact with the forum.
+
+Contributing
+Contributions are welcome! If you have suggestions, improvements, or bug fixes, please feel free to submit an issue or a pull request.
+
+1. Fork the repository.
+
+2. Create a feature branch (git checkout -b feature/my-feature).
+
+3. Commit your changes (git commit -am 'Add new feature').
+
+4. Push to the branch (git push origin feature/my-feature).
+
+5. Open a pull request.
+
+**License**
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+**Acknowledgements**
+- **UNESA**: For providing the platform and inspiration for a community forum.
+
+- **Meteor.js Community**: For the powerful tools and resources to build modern web applications.
+
+- Mentors, peers, and all who have contributed insights and support during this project.
+
+
+
+
+---
+
+This template should give your GitHub repository a clear and professional introduction, outlining the purpose, features, and technical details of your project. 
+
+Would you like to add more sections such as FAQs, troubleshooting tips, or deployment guides?
