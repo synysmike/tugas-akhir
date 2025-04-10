@@ -1,0 +1,21 @@
+<template name="SingleQuote">
+  <div class="list-group">
+    <div class="list-group-item-danger">
+  <div class="media">
+    <div class="media-body">
+      <h6 class="media-heading text-right"><small>Tanggal Quote :
+        {{CreatedAt}}{{#if quoteDeleteRight}}
+      <a class="glyphicon glyphicon-trash text-right" id="deleteQuote" ><span class="badge"></span></a>
+        {{/if}}</small>
+      </h6>
+        <h4 class="text-right">{{Message}}</h4>
+
+    </div>
+    <div class="media-right media-middle">
+      <img src="3.jpg" alt="kuci" class="media-object" style="width:60px"><br>
+      <p><small><i>{{Author}}</i></small></p>
+    </div>
+  </div>
+  </div>
+</div>
+</template>

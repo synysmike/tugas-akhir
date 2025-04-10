@@ -1,0 +1,22 @@
+<template name="AddKategori">
+  <div class="row">
+    <div class="col-xs-12">
+      <form id="Tambah" style="padding-top : 20px">
+        <div class="form-group">
+          <input type="text" class="form-control" id="namaKategori" placeholder="Masukan Nama Kategori">
+        </div>
+        <div class="form-group">
+          <button class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge w3-text-green center-block" type="submit" name="button">Tambah</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="col-xs-12">
+    <h3 style="font-family: 'Quicksand', sans-serif;">Daftar Kategori :</h3>
+    {{#each kategori}}
+  <li>  <h5 style="font-family: 'Quicksand', sans-serif;">{{Kategori}}</h5></li>
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,48 @@
+<template name="SinglePost">
+  <div class="list-info">
+    <div class="media">
+      <div class="media-left">
+        <img src="1.jpg" alt="kucin" class="media-object" style="width:60px"><br>
+        <p><small><i>{{Author}}</i></small></p>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{Title}}</h4>
+        <p><small>Kategori : {{Kategori}}</small></p>
+        <p>{{>starsRating mutable=true class="rate-post" id=_id }}{{Rating}}</p>
+
+        <span class="likebtn-wrapper" data-theme="custom" data-icon_l="thmb7-u" data-identifier="item_1"></span>
+        <p>{{{Body}}}</p>
+      </div>
+    </div>
+    <h4>Komentar :</h4>
+  </div>
+
+
+
+      {{#each comments}}
+      <div style="border-top: 1px solid #ccff99">
+        {{>SingleComment}}
+        </div>
+      {{/each}}
+
+    <div class="col-xs-12">
+      {{#if isInRole 'user, admin'}}
+      {{>AddComment}}
+      {{else}}
+      <h2 class="text-center"> Login dulu mas, biar bisa Komentar!!</h2>
+      {{/if}}
+    </div>
+
+
+  <script>
+  (function(d,e,s){
+    if(d.getElementById("likebtn_wjs"))return;
+    a=d.createElement(e);
+    m=d.getElementsByTagName(e)[0];
+    a.async=1;a.id="likebtn_wjs";
+    a.src=s;
+    m.parentNode.insertBefore(a, m)
+  });
+    (document,"script","//w.likebtn.com/js/w/widget.js");
+    </script>
+</template>

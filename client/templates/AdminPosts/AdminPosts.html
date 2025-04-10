@@ -1,0 +1,26 @@
+<template name="AdminPosts">
+  <div class="row">
+    <table class="table table-hover">
+        <thead>
+        <tr class="row">
+          <th></th>
+          <th></th>
+          <th class="text-center" style="font-family: 'Quicksand', sans-serif;">Title</th>
+          <th class="text-center" style="font-family: 'Quicksand', sans-serif;">Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each posts}}
+          <tr class="row">
+            <td class="text-center">{{Title}} </td>
+            <td></td>
+            <td></td>
+            <td class="right-block"><button class="w3-btn w3-tiny w3-white w3-border w3-border-indigo w3-round-xlarge w3-text-indigo" id="deletePost">Delete</button> <button class="w3-btn w3-tiny w3-white w3-border w3-border-red w3-round-xlarge w3-text-red" id="editPost">Edit</button> <button class="w3-btn w3-tiny w3-white w3-border w3-border-yellow w3-round-xlarge w3-text-yellow" id="show">Show Thread</button></td>
+          </tr>
+          {{/each}}
+        </tbody>
+
+    </table>
+  </div>
+</template>

@@ -1,0 +1,51 @@
+<template name="NavBar">
+  <div>
+<nav class="w3-sidenav" style="display:none;z-index:5;" id="mySidenav">
+<div class="w3-white w3-animate-left">
+  <div class="w3-padding w3-center">
+<img src="unesa.png" style="width:75%;z-index:6;">
+  </div>
+  <div class="col-sm-12 w3-text-orange"><a onclick="w3_close()" class="w3-hover-green" href="/" style="font-family: 'Quicksand', sans-serif;">Home</a></div>
+  {{#if isInRole 'suspend'}}
+  <div class="col-sm-12 w3-text-green">  <a onclick="w3_close()" class="w3-hover-blue" href="/addpost" style="font-family: 'Quicksand', sans-serif;">add post</a></div>
+  <div class="col-sm-12 w3-text-blue"><a onclick="w3_close()" class="w3-hover-red" href="/showposts" style="font-family: 'Quicksand', sans-serif;">show post</a></div>
+  <div class="col-sm-12 w3-text-red">  <a onclick="w3_close()" class="w3-hover-yellow" href="/ucp" style="font-family: 'Quicksand', sans-serif;">Ganti password</a></div>
+  <div class="col-sm-12 w3-text-indigo"><a onclick="w3_close()" class="w3-hover-white" href="/" id="logout" style="font-family: 'Quicksand', sans-serif;">Logout</a></div>
+  {{/if}}
+    {{#if isInRole 'admin'}}
+  <div class="col-sm-12 w3-text-red">  <a onclick="w3_close()" class="w3-hover-indigo" href="/admin" style="font-family: 'Quicksand', sans-serif;">Admin Panel</a></div>
+  <div class="col-sm-12 w3-text-indigo">  <a onclick="w3_close()" class="w3-hover-blue" href="/addpost1" style="font-family: 'Quicksand', sans-serif;">add post</a></div>
+  <div class="col-sm-12 w3-text-cyan"><a onclick="w3_close()" class="w3-hover-red" href="/showposts" style="font-family: 'Quicksand', sans-serif;">show post</a></div>
+  <div class="col-sm-12 w3-text-green">  <a onclick="w3_close()" class="w3-hover-yellow" href="/ucp1" style="font-family: 'Quicksand', sans-serif;">Ganti password</a></div>
+<div class="col-sm-12 w3-text-yellow"><a onclick="w3_close()" class="w3-hover-white" href="/" id="logout" style="font-family: 'Quicksand', sans-serif;">Logout</a></div>
+    {{/if}}
+    {{#if isInRole 'user'}}
+    <div class="col-sm-12 w3-text-green">  <a onclick="w3_close()" class="w3-hover-blue" href="/addpost" style="font-family: 'Quicksand', sans-serif;">add post</a></div>
+    <div class="col-sm-12 w3-text-blue"><a onclick="w3_close()" class="w3-hover-red" href="/showposts" style="font-family: 'Quicksand', sans-serif;">show post</a></div>
+    <div class="col-sm-12 w3-text-red">  <a onclick="w3_close()" class="w3-hover-yellow" href="/ucp" style="font-family: 'Quicksand', sans-serif;">Ganti password</a></div>
+  <div class="col-sm-12 w3-text-indigo"><a onclick="w3_close()" class="w3-hover-white" href="/" id="logout" style="font-family: 'Quicksand', sans-serif;">Logout</a></div>
+    {{else}}
+    {{#if isInRole 'admin'}}
+    <div></div>
+    {{else}}
+      <div class="col-sm-12 w3-text-indigo"><a onclick="w3_close()" class="w3-hover-grey" href="/login" style="font-family: 'Quicksand', sans-serif;">Login/Register</a></div>
+      {{/if}}
+    {{/if}}
+</div>
+</nav>
+
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+</div>
+
+
+<script>
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+</template>

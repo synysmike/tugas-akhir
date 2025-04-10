@@ -1,0 +1,18 @@
+<template name="ShowPosts">
+  <h1 class="text-center" style="font-family: 'Quicksand', sans-serif;">Show Post</h1>
+  <div class="media">
+    {{#each posts}}
+        <h4 style="border-top: 1px solid #ccff99"></h4>
+        <div class="media-left">
+        <!-- foto profil -->
+          <img src="3.jpg" alt="kucing" class="media-object" style="width:60px"/>
+      </div>
+        <div class="media-body">
+          <h2 class="media-heading" style="font-family: 'Quicksand', sans-serif;"><small class="w3-text-red">{{Title}}</small></h2>
+          <h4 style="font-family: 'Quicksand', sans-serif;"><small class="w3-text-yellow" >Rating : {{Rating}}</small></h4>
+          <h4 style="font-family: 'Quicksand', sans-serif;"><small class="w3-text-green" >by:{{Author}}</small></h4>
+          <button class="w3-btn w3-white w3-border w3-border-indigo w3-round dropdown-toggle w3-text-indigo" id="readMore"> <span class="glyphicon glyphicon-list-alt"></span> Show Thread!!</button>
+        </div>
+    {{/each}}
+  </div>
+</template>

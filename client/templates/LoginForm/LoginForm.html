@@ -1,0 +1,130 @@
+<template name="LoginForm">
+  {{#if isInRole 'admin'}}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+        <h2 class="text-center" style="font-family: 'Quicksand', sans-serif;">Untuk Tambah User</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg center-block" data-toggle="modal" data-target="#registerForm">Register</button>
+        </div>
+      </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="registerForm" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-center">silahkan Buat Akun Baru</h3>
+        </div>
+        <div class="modal-body">
+          <div>
+          <form id="registerForm" >
+            <div class="form-group">
+              <input type="text" name="RegGambar" id="RegGambar" class="form-control" placeholder="gambar">
+            </div>
+            <div class="form-group">
+              <input type="text" name="RegUsername" id="RegUsername" class="form-control" placeholder="Nama Mahasiswa">
+            </div>
+            <div class="form-group">
+              <input type="email" name="RegEmail" id="RegEmail" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" name="RegPassword" id="RegPassword" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="text" name="RegNim" id="RegNim" class="form-control" placeholder="NIM">
+            </div>
+            <div class="form-group">
+              <label for="RegJk">Jenis Kelamin : </label>
+              <select class="form-control" id="RegJk" placeholder="Jenis Kelamin">
+                <option>Laki-Laki</option>
+                <option>Perempuan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="RegFakultas">Fakultas : </label>
+              <select class="form-control" id="RegFakultas" placeholder="Fakultas" >
+                <option>Ekonomi</option>
+                <option>Fmipa</option>
+                <option>Teknik</option>
+                <option>Pendidikan</option>
+                <option>Bahasa</option>
+                <option>FISH</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="RegJurusan">Jurusan :</label>
+              <select class="form-control" id="RegJurusan" placeholder="Jurusan">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <div id="mySidenav" class="form-group">
+              <button type="submit" name="button" class="form-control btn btn-success" >Daftar</button>
+            </div>
+          </form>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+    </div>
+  </div>
+
+{{else}}
+  <div class="container-">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center" style="font-family: 'Quicksand', sans-serif;">Untuk Login</h2>
+       <button type="button" class="w3-center w3-btn w3-white w3-border w3-border-indigo w3-round w3-text-indigo" data-toggle="modal" data-target="#LoginForm" style="width:100%;margin:auto;">Login</button>
+      </div>
+    </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="LoginForm" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-center" style="font-family: 'Quicksand', sans-serif;">Silahkan Login</h3>
+        </div>
+        <div class="modal-body">
+
+          <div>
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="text" name="username" id="username" class="form-control" placeholder="Masukan Nim">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <button type="submit" name="button" class="form-control w3-btn w3-white w3-border w3-border-indigo w3-round w3-text-indigo">Login</button>
+            </div>
+          </form>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+  {{/if}}
+
+</template>

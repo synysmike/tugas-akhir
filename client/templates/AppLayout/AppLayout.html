@@ -1,0 +1,11 @@
+<template name="AppLayout">
+    <div>
+    <div class="navbar navbar-default navbar-fixed-top w3-indigo">
+      {{>NavBar}}
+      <span id="main" class="w3-opennav w3-xlarge fa fa-bars navbar-brand" onclick="w3_open()" style="color : white"></span>
+    </div>
+    <div class="container-fluid" style="margin-top:50px">
+        {{>yield}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,89 @@
+
+<template name="Logincss">
+
+  <div class="container">
+  <h2>Untuk Login</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Login</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-center">silahkan login</h3>
+        </div>
+        <div class="modal-body">
+
+          <div>
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" name="button" class="form-control btn btn-success">Login</button>
+            </div>
+          </form>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+<h2>Untuk Register</h2>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Register</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-center">silahkan Buat Akun Baru</h3>
+      </div>
+      <div class="modal-body">
+        <div>
+        <form id="registerForm" >
+          <div class="form-group">
+            <input type="text" name="RegUsername" id="RegUsername" class="form-control" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="email" name="RegEmail" id="RegEmail" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" name="RegPassword" id="RegPassword" class="form-control" placeholder="Password">
+          </div>
+
+          <div id="mySidenav" class="form-group">
+            <button type="submit" name="button" class="form-control btn btn-success">Daftar</button>
+          </div>
+        </form>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+</template>

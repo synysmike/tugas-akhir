@@ -1,0 +1,23 @@
+<template name="EditPosts">
+
+    <div class="col-xs-12">
+      <form role="form" id="editPost">
+        <div class="form-group">
+          <label for="postTitle" style="font-family: 'Quicksand', sans-serif;">Post Title:</label>
+          <input type="text" value="{{Title}}" name="postTitle" id="postTitle" class="form-control" placeholder="Masukan judul">
+        </div>
+
+  <div class="form-group">
+    <label for="postMessage" style="font-family: 'Quicksand', sans-serif;"> Post Message</label>
+    <textarea class="form-control" value="{{Body}}" name="postMessage" id="postMessage" rows="4" placeholder="Masukan Pesan"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="form-control btn btn-success">SAVE</button>
+
+  </div>
+      </form>
+
+    </div>
+
+</template>

@@ -1,0 +1,18 @@
+<template name="AdminUsers">
+      <div class="col-xs-12" style="padding-top:20px">
+          {{> adminTemplate}}
+      </div>
+      <div class="col-xs-12">
+        {{>LoginForm}}
+      </div>
+</template>
+
+<template name="adminTemplate">
+  <div class="col-xs-12">
+    {{#if isAdminUser}}
+        {{> accountsAdmin}}
+    {{else}}
+        <h4>Must be admin to see this...</h4>
+    {{/if}}
+  </div>
+</template>

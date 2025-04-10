@@ -1,0 +1,61 @@
+<template name="Home">
+
+{{#if isInRole 'user, admin'}}
+<div class="row">
+  <div class="col-xs-12">
+    <h3 class="text-center" style="font-family: 'Quicksand', sans-serif;">Selamat Datang <a href="#" class="text-capitalize">{{name}}</a></h3>
+  </div>
+</div>
+{{else}}
+<h3 class=" text-center" style="font-family: 'Quicksand', sans-serif;">Selamat datang di forum unesa, silahkan <a href="/login">Login</a></h3>
+{{/if}}
+
+{{#if isInRole 'suspend'}}
+<h6 class="text-center" style="font-family: 'Quicksand', sans-serif;">akun anda tersuspend, segera hubungi admin</h6>
+{{/if}}
+  <!-- welcome text end -->
+{{>ShowHome}}
+
+</template>
+
+<template name="ShowHome">
+  <div class="media">
+    <div class="dropdown">
+      <button class="w3-btn w3-white w3-border w3-border-indigo w3-round dropdown-toggle w3-text-indigo" type="button" data-toggle="dropdown">sort by
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        {{#if Reload}}
+        <li><a class="sorting-new" href="#" style="font-family: 'Quicksand', sans-serif;">new post</a></li>
+        {{else}}
+        <li><a class="sorting-top" href="/" style="font-family: 'Quicksand', sans-serif;">top post</a></li>
+        {{/if}}
+      </ul>
+    </div>
+<!-- <div class="">
+  <h5>sorting post: </h5>
+  <select class="form-control" id="select">
+      <option>-allpost-</option>
+      {{#each kategori}}
+    <option>{{Kategori}}</option>
+      {{/each}}
+  </select>
+</div> -->
+
+
+
+    {{#each posts}}
+        <h4 style="border-top: 1px solid #ccff99"></h4>
+        <div class="media-left">
+        <!-- foto profil -->
+          <img src="3.jpg" alt="kucing" class="media-object" style="width:60px"/>
+      </div>
+        <div class="media-body">
+          <h2 class="media-heading" style="font-family: 'Quicksand', sans-serif;"><small class="w3-text-red">{{Title}}</small></h2>
+          <h6><small class="w3-text-orange" style="font-family: 'Quicksand', sans-serif;">Rating : {{Rating}}</small></h6>
+          <h4><small class="w3-text-green" style="font-family: 'Quicksand', sans-serif;">Kategori : <a class="sorting" href="/">{{Kategori}}</a></small></h4>
+          <h6><small class="w3-text-blue" style="font-family: 'Quicksand', sans-serif;">by:{{Author}}</small></h6>
+          <button class="w3-btn w3-white w3-border w3-border-indigo w3-round-xlarge" id="readMore" style="font-family: 'Quicksand', sans-serif;"> <i class="glyphicon glyphicon-list-alt w3-text-indigo"> Show Thread!!</i> </button>
+        </div>
+    {{/each}}
+  </div>
+</template>

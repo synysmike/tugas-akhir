@@ -1,0 +1,47 @@
+<template name="SingleComment">
+  <div class="list-group">
+    <div class="list-group-item-success">
+      <div class="media">
+        <div class="media-left">
+          <img src="2.jpg" alt="ku" class="media-object" style="width:60px"><br>
+          <p><small><i>{{Author}}</i></small></p>
+        </div>
+        <div class="media-body">
+          <p class="media-heading" type="date"><small>Tanggal Komen : {{CreatedAt}}
+            {{#if commentDeleteRight}}
+          <a class="glyphicon glyphicon-trash text-right" id="deleteComment" ><span class="badge"></span></a>
+            {{/if}}</small></p>
+          <h4>
+          {{Message}}
+        </h4>
+        </div>
+        <div class="media-right">
+
+        </div>
+  <h5>Quotes : </h5>
+  {{#each quotes}}
+  <div style="border-top: 1px solid #ccff99">
+    {{>SingleQuote}}
+    </div>
+  {{/each}}
+
+  <div>
+    {{#if isInRole 'user, admin'}}
+    {{>Quote}}
+    {{else}}
+    <h2 class="text-center"> Login dulu mas, biar bisa Komentar!!</h2>
+    {{/if}}
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+</template>
